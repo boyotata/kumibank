@@ -2,61 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Blue and White UI</title>
+  <title>Kumi Bank - Secure Login</title>
   <style>
     body {
-      background-color: #e0f0ff; /* Light blue */
-      color: #003366; /* Dark blue text */
+      margin: 0;
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 50px;
+      background-color: #f0f8ff;
+      color: #003366;
     }
 
-    .button {
-      background-color: #007BFF;
-      border: none;
+    header {
+      background-color: #003366;
       color: white;
-      padding: 15px 25px;
-      margin: 10px;
-      font-size: 16px;
-      border-radius: 5px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .login-btn {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 4px;
       cursor: pointer;
+      font-size: 16px;
     }
 
-    .nav-buttons {
-      display: grid;
-      grid-template-areas:
-        ".    up    ."
-        "left .    right"
-        ".    down  .";
-      gap: 10px;
-      width: 200px;
-      margin: 30px auto;
+    .login-btn:hover {
+      background-color: #0056b3;
     }
 
-    .nav-buttons button {
-      width: 80px;
-      height: 40px;
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #666;
     }
-
-    .up    { grid-area: up; }
-    .down  { grid-area: down; }
-    .left  { grid-area: left; }
-    .right { grid-area: right; }
   </style>
 </head>
 <body>
 
-  <h1>Welcome to the Thomas Lee Kumi's website</h1>
+  <header>
+    <h1>Kumi Bank</h1>
+    <p>Your Trusted Financial Partner</p>
+  </header>
 
-  <button class="button">Yes</button>
+  <main>
+    <div class="login-container">
+      <h2>Login to Your Account</h2>
+      <form action="/login" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+    </div>
+  </main>
 
-  <div class="nav-buttons">
-    <button class="button up">↑ Up</button>
-    <button class="button left">← Left</button>
-    <button class="button right">→ Right</button>
-    <button class="button down">↓ Down</button>
-  </div>
+  <footer>
+    &copy; 2025 Kumi Bank. All rights reserved.
+  </footer>
 
 </body>
 </html>
+
