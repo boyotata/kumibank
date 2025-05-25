@@ -90,7 +90,11 @@
   <footer>
     &copy; 2025 Kumi Bank. All rights reserved.
   </footer>
-
+ fetch("https://lcu2hvnih7.execute-api.us-east-1.amazonaws.com/dev", requestOptions)
+        .then(response => response.text())
+        .then(result => alert(JSON.parse(result).body))
+        .catch(error => console.log('error', error));
+    }
 </body>
 </html>
 
